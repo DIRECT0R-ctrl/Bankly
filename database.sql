@@ -18,7 +18,7 @@ CREATE TABLE accounts (
   balance INT,
   account_type VARCHAR(100),
   customer_id INT,
-  FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+  FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Transactions (
@@ -26,6 +26,6 @@ CREATE TABLE Transactions (
   amount INT,
   transaction_type VARCHAR(100),
   account_id INT,
-  FOREIGN KEY (account_id) REFERENCES accounts(account_id)
+  FOREIGN KEY (account_id) REFERENCES accounts(account_id) ON DELETE CASCADE
 );
 
