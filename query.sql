@@ -78,9 +78,12 @@ FROM accounts
 WHERE account_type = 'savings';
 
 -- Afficher les transactions avec un amount ≥ 500
+SELECT * FROM transactions WHERE amount >= 500;
 
 -- Afficher les transactions avec un amount entre 100 et 1000
-
+SELECT *
+FROM transactions 
+WHERE amount BETWEEN 100 AND 1000;
 
 -- Afficher les accounts du customer_id = 1
 
