@@ -64,11 +64,11 @@ SELECT * FROM transactions WHERE account_id = 1;
 
 -- Afficher les customers ayant un account géré par l’advisor_id = 2
 
--- SELECT * 
--- FROM customers 
--- JOIN accounts
--- ON customers.customer_id = accounts.advisor_id
--- WHERE accounts.advisor_id = 2;
+SELECT * customers*.
+FROM costumers
+JOIN accounts
+ON customers.customer_id = accounts.advisor_id
+WHERE accounts.advisor_id = 2;
 
 
 
@@ -115,7 +115,12 @@ FROM transactions
 ORDER BY transaction_date DESC
 LIMIT 5;
 -- Afficher chaque account avec le nom du customer et le nom de l’advisor (JOIN)
-
+SELECT accounts.*, 
+customers.full_name, 
+advisors.full_name
+FROM accounts 
+JOIN customers ON accounts.customer_id = accounts.advisor_id
+JOIN advisors ON accounts_advisors_id = accounts.customer_id; 
 
 
 
