@@ -86,14 +86,22 @@ FROM transactions
 WHERE amount BETWEEN 100 AND 1000;
 
 -- Afficher les accounts du customer_id = 1
-
+SELECT * FROM accounts WHERE customer_id = 1;
 
 -- Afficher les accounts triés par balance (ordre croissant)
+SELECT *
+FROM accounts 
+ORDER BY balance ASC;
 
 -- Afficher les transactions triées par amount (ordre décroissant)
+SELECT * 
+FROM accounts 
+ORDER BY balance DESC;
 
 -- Afficher les 5 plus grandes transactions
-
+SELECT *
+FROM transactions 
+WHERE 
 -- Afficher toutes les transactions triées par transaction_date décroissant
 
 -- Afficher les 3 dernières transactions
