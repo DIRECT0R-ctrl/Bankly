@@ -101,7 +101,8 @@ ORDER BY balance DESC;
 -- Afficher les 5 plus grandes transactions
 SELECT *
 FROM transactions 
-WHERE 
+ORDER BY amount DESC
+LIMIT 1;
 -- Afficher toutes les transactions triées par transaction_date décroissant
 
 -- Afficher les 3 dernières transactions
