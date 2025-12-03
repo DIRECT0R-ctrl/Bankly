@@ -18,9 +18,10 @@ CREATE TABLE accounts (
   balance INT,
   account_type VARCHAR(100),
   customer_id INT,
+  advisor_id INT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE;
+  FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE,
   FOREIGN KEY (advisor_id) REFERENCES advisors(advisor_id) ON DELETE CASCADE;
 );
 

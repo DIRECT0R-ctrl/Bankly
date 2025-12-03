@@ -64,8 +64,18 @@ SELECT * FROM transactions WHERE account_id = 1;
 
 -- Afficher les customers ayant un account géré par l’advisor_id = 2
 
+-- SELECT * 
+-- FROM customers 
+-- JOIN accounts
+-- ON customers.customer_id = accounts.advisor_id
+-- WHERE accounts.advisor_id = 2;
+
+
 
 -- Afficher les accounts ayant account_type = "Savings"
+SELECT * 
+FROM accounts 
+WHERE account_type = 'savings';
 
 -- Afficher les transactions avec un amount ≥ 500
 
