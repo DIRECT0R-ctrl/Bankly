@@ -102,11 +102,18 @@ ORDER BY balance DESC;
 SELECT *
 FROM transactions 
 ORDER BY amount DESC
-LIMIT 1;
+LIMIT 5;
 -- Afficher toutes les transactions triées par transaction_date décroissant
+SELECT *
+FROM transactions
+ORDER BY transaction_date DESC;
+
 
 -- Afficher les 3 dernières transactions
-
+SELECT * 
+FROM transactions 
+ORDER BY transaction_date DESC
+LIMIT 5;
 -- Afficher chaque account avec le nom du customer et le nom de l’advisor (JOIN)
 
 
